@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import UserCard from "./UserCard";
 import UserModal from "./UserModal";
-import useUserData from "../hooks/useUserData";
+import useUserData from "../hook/useUserData";
 
 const Dashboard = () => {
   const { filteredUsers, search, setSearch, setSort } = useUserData();

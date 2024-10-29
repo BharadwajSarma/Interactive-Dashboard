@@ -7,6 +7,9 @@ const useUserData = () => {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("");
 
+
+  // Initial fetching of the users data
+
   useEffect(() => {
     const fetchUsers = async () => {
       const response = await axios.get("https://jsonplaceholder.typicode.com/users");
@@ -15,6 +18,9 @@ const useUserData = () => {
     };
     fetchUsers();
   }, []);
+
+
+  // Filtering of users
 
   useEffect(() => {
     let sortedUsers = [...users];
